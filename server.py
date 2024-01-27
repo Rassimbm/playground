@@ -9,5 +9,9 @@ def home():
 def level_1():
     return render_template("home.html", color = "aqua", num = 3)
 
+@app.route("/play/<int:num>")
+def level_2(num):
+    return render_template("home.html", color = "aqua", num=num)
+
 if __name__ == "__main__":
     app.run(debug=True)
