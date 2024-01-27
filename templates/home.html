@@ -14,21 +14,22 @@
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
-            gap: 5px 5px;
         }
         .box {
             width: 150px;
             height: 150px;
-            background-color: aqua;
             border: 2px solid black;
             border-radius: 4px;
+            background-color: {{color}};
         }
     </style>
 </head>
 <body>
     <h1>Welcome!</h1>
     <div class="container">
+        {%for i in range(0,num)%}
         <div class="box"></div>
+        {%endfor%}
     </div>
 </body>
 </html>

@@ -5,5 +5,9 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
+@app.route("/play")
+def level_1():
+    return render_template("home.html", color = "aqua", num = 3)
+
 if __name__ == "__main__":
     app.run(debug=True)
